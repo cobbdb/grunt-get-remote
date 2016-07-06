@@ -1,29 +1,25 @@
-var httpcopy = require('./util/httpcopy.js');
+var httpcopy = require('./util/httpcopy.js'),
+    buildMap = require('./util/build-file-map.js');
 
 /**
  * Installs remote dependencies as listed in `package.json`.
- * Remote dependencies must be installed manually and their paths
- * must not begin with protocol (http/https).
- *
- * Files are installed into the `remote_components` directory.
- *
- * Example) "gpt.js": "www.googletagservices.com/tag/js/gpt.js"
  */
 module.exports = function (grunt) {
-    grunt.registerTask('httpcopy', function () {
+    grunt.registerMultiTask('get-remote', function () {
         var file, path, pivot,
-            remotes = this.files,
+            remotes = buildMap(this.files),
+            options = this.options(),
+            root = options.root || 'remote_components',
             done = this.async(),
             remaining = Object.keys(remotes).length;
 
-        console.log('\t>>> files is', JSON.stringify(remotes, null, 3));
         grunt.log.subhead('Installing ' + remaining + ' remote files...');
-        /*for (file in remotes) {
+        for (file in remotes) {
             path = remotes[file];
             pivot = path.indexOf('/');
             httpcopy(grunt, {
                 filename: file,
-                dest: 'remote_components/' + file,
+                dest: root + '/' + file,
                 hostname: path.substr(0, pivot),
                 path: path.substr(pivot)
             }, function () {
@@ -32,6 +28,6 @@ module.exports = function (grunt) {
                     done();
                 }
             });
-        }*/
+        }
     });
 };

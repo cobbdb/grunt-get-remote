@@ -1,0 +1,32 @@
+{
+  "name": "grunt-get-remote",
+  "version": "1.0.0",
+  "description": "Fetch remote assets for your build tasks.",
+  "main": "tasks/get-remote.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cobbdb/grunt-get-remote.git"
+  },
+  "keywords": [
+    "grunt",
+    "remote",
+    "http",
+    "copy",
+    "static",
+    "assets",
+    "task"
+  ],
+  "author": "Dan Cobb <cobbdb@gmail.com> (http://www.github.com/cobbdb)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cobbdb/grunt-get-remote/issues"
+  },
+  "homepage": "https://github.com/cobbdb/grunt-get-remote#readme",
+  "dependencies": {},
+  "peerDependencies": {
+    "grunt": "^1.0.1"
+  }
+}

@@ -1,7 +1,7 @@
 var http = require('http');
 
 /**
- * Grunt utility to fetch remote files.
+ * Utility to fetch remote files.
  * @param {String} o.hostname Remote hostname.
  * @param {String} o.path Remote file path.
  * @param {String} o.dest Write destination.
