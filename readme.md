@@ -2,7 +2,9 @@
 
 [![License](https://img.shields.io/npm/l/grunt-get-remote.svg)](http://npmjs.com/package/grunt-get-remote)
 [![NPM version](https://badge.fury.io/js/grunt-get-remote.svg)](http://badge.fury.io/js/grunt-get-remote)
-[![Dependencies](https://img.shields.io/david/dev/cobbdb/grunt-get-remote.svg)](./package.json)
+[![Dependencies](https://img.shields.io/david/cobbdb/grunt-get-remote.svg)](./package.json)
+[![Peer Dependencies](https://img.shields.io/david/peer/cobbdb/grunt-get-remote.svg)](./package.json)
+[![Downloads](https://img.shields.io/npm/dm/cobbdb/grunt-get-remote.svg)](./package.json)
 
 Fetch remote assets for your build tasks.
 
